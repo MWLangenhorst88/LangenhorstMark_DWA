@@ -1,3 +1,5 @@
+#Dynamic Form Builder
+
 This dynamic HTML form building tool is made to help you by:
 1. Extracting an array of objects sequentially
 2. Determining the type of input in each object
