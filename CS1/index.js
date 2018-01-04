@@ -1,6 +1,11 @@
-var inputFields = [{type: 'text'}, {type: 'select'}, {type: 'radio'}];
+// consider documentation to show others how to implement the program and run the app
+// consider adding name and value attributes so users can customize their forms
+// adding more objects for testing purposes
+var inputFields = [{type: 'text'}, {type: 'select'}, {type: 'radio'}, {test: 'text'}, {anotherTest: 'misc'}, {type: 'testAgain'}, {tYpE: 'TEXT'}];
+
 
 inputFields.forEach(function (t) {
+		// suggest using .toLowerCase() or something similar: last example i added above fails due to case even though the information is right
     switch (t.type){
         case 'text':
             t = '<input type="text">';
@@ -32,6 +37,7 @@ inputFields.forEach(function (t) {
 
         default:
             t = "Something went wrong.";
+						// suggest being more specific with what went wrong, maybe print the inputField value?
             break;
     }
     console.log(t + '\n');
