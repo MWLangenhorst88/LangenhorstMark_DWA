@@ -1,38 +1,41 @@
-var inputFields = [{type: 'text'}, {type: 'select'}, {type: 'radio'}];
+module.exports.getInputFields = function getInputFields(inputFields) {
+    inputFields.forEach(function (input) {
+        switch (input.type){
+            case 'text':
+                input = '<input type="text" name="' + input.name + '" placeholder="' + input.placeholder +'">';
+                break;
 
-inputFields.forEach(function (t) {
-    switch (t.type){
-        case 'text':
-            t = '<input type="text">';
-            break;
+            case 'button':
+                input = '<input type="button" name="' + input.name + ' "value="' + input.value + '">';
+                break;
 
-        case 'button':
-            t = '<input type="button">';
-            break;
+            //AS YOU CAN SEE, I HAVE A DEFAULT OF THREE DIFFERENT VALUES FOR RADIO, CHECKBOX, AND SELECT.
+            //IF YOU ADD A FEW MORE OPTIONS HERE TO FIT YOUR NEEDS, I WON'T TELL :)
+            case 'radio':
+                input = '<input type="radio" name="' + input.name + '" value="' + input.value1 +'">\n' +
+                    '<input type="radio" name="' + input.name + '" value="' + input.value2 + '">\n' +
+                    '<input type="radio" name="' + input.name + '" value="' + input.value3 + '">';
+                break;
 
-        case 'radio':
-            t = '<input type="radio" name="radio" value="1">\n' +
-                '<input type="radio" name="radio" value="2">\n' +
-                '<input type="radio" name="radio" value="3">';
-            break;
+            case 'checkbox':
+                input = '<input type="checkbox" name="check" value="' + input.value1 + '">\n' +
+                    '<input type="checkbox" name="check" value="' + input.value2 + '">\n' +
+                    '<input type="checkbox" name="check" value="' + input.value3 + '">';
+                break;
 
-        case 'checkbox':
-            t = '<input type="checkbox" name="check" value="1">\n' +
-                '<input type="checkbox" name="check" value="2">\n' +
-                '<input type="checkbox" name="check" value="3">';
-            break;
+            case 'select':
+                input = '<select>\n' +
+                    '\t<option name="select" value="' + input.value1 + '">\n' +
+                    '\t<option name="select" value="' + input.value2 + '">\n' +
+                    '\t<option name="select" value="' + input.value3 + '">\n' +
+                    '</select>';
+                break;
 
-        case 'select':
-            t = '<select>\n' +
-                '\t<option name="select" value="1">\n' +
-                '\t<option name="select" value="2">\n' +
-                '\t<option name="select" value="3">\n' +
-                '</select>';
-            break;
+            default:
+                input = "Something went wrong. Please check your work and try again.";
+                break;
+        }
+        console.log(input + '\n');
+    });
+};
 
-        default:
-            t = "Something went wrong.";
-            break;
-    }
-    console.log(t + '\n');
-});
