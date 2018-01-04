@@ -1,3 +1,5 @@
+//MARK LANGENHORST | 2018 - FREE TO USE ON ANY PROJECT
+//MARKLANGENHORST.COM
 module.exports.getInputFields = function getInputFields(inputFields) {
     inputFields.forEach(function (input) {
         switch (input.type){
