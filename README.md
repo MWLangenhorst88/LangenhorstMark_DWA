@@ -30,7 +30,7 @@ This dynamic HTML form building tool is made to help you by:
 Mark Langenhorst - marklangenhorst.com
 
 ### AirBnB Style Guide - ESLint
-This Form Builder, as of v1.2.0, is compliant with the AirBnB style guide using ESLint.
+This Form Builder, as of [v1.2.0,](https://github.com/MWLangenhorst88/LangenhorstMark_DWA/releases/tag/v1.2.0) is compliant with the AirBnB style guide using ESLint.
 
 ## Personal Use
 
