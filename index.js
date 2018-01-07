@@ -1,6 +1,8 @@
 // MARK LANGENHORST | 2018 - FREE TO USE ON ANY PROJECT
 // MARKLANGENHORST.COM
 module.exports.getInputFields = function getInputFields(inputFields) {
+  // Declare inputResults as blank string to ensure it's not being called again with past input
+  let inputResults = '';
   inputFields.forEach((input) => {
     switch (input.type) {
       case 'text':
@@ -19,21 +21,22 @@ module.exports.getInputFields = function getInputFields(inputFields) {
         break;
 
       case 'checkbox':
-        input = `<input type="checkbox" name="check" value="${input.value1}">\n` +
-                `<input type="checkbox" name="check" value="${input.value2}">\n` +
-                `<input type="checkbox" name="check" value="${input.value3}">`;
+        input = `<input type="checkbox" name="${input.name}" value="${input.value1}">\n` +
+                `<input type="checkbox" name="${input.name}" value="${input.value2}">\n` +
+                `<input type="checkbox" name="${input.name}" value="${input.value3}">`;
         break;
 
       case 'select':
-        input = `<select>\n\t<option name="select" value="${input.value1}">\n` +
-                `\t<option name="select" value="${input.value2}">\n` +
-                `\t<option name="select" value="${input.value3}">\n </select>`;
+        input = `<select>\n\t<option name="${input.name1}" value="${input.value1}">\n` +
+                `\t<option name="${input.name2}" value="${input.value2}">\n` +
+                `\t<option name="${input.name3}" value="${input.value3}">\n </select>`;
         break;
 
       default:
-        input = 'Something went wrong. Please check your work and try again.';
-        break;
+        // Something happened that shouldn't have, so throw error instead of adding it to string
+        throw new Error('Something went wrong. Please check your work and try again.');
     }
-    console.log(input);
+    inputResults += input;
   });
+  return inputResults;
 };

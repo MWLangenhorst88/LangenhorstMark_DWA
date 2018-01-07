@@ -22,7 +22,9 @@ const testInput = [
   },
   {
     type: 'select',
-    name: 'selectOptions',
+    name1: 'option 1',
+    name2: 'option 2',
+    name3: 'option 3',
     value1: 'option 1',
     value2: 'option 2',
     value3: 'option 3',
