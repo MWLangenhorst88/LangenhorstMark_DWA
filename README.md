@@ -9,8 +9,28 @@ This dynamic HTML form building tool is made to help you by:
    * If the code doesn't recognize the input, it will just output "Something went wrong."
 4. Logging the HTML through the console
 
+### Input Options and Attributes
+* Text
+   * Name
+   * Placeholder
+* Button - Can be used for submit, reset or other functionality
+   * Name
+   * Value (Example: 'Click here!')
+* Radio - Can select ONE option of three values
+   * Name
+   * 3 Value names
+* Checkbox - Can check UP TO THREE options of three values
+   * Name
+   * 3 Value names
+* Select - Dropdown box of three different values from which to choose
+   * 3 Names for each option
+   * 3 Option values that will appear in select 
+
 ### Developer
 Mark Langenhorst - marklangenhorst.com
+
+### AirBnB Style Guide - ESLint
+This Form Builder, as of v1.2.0, is compliant with the AirBnB style guide using ESLint.
 
 ## Personal Use
 
