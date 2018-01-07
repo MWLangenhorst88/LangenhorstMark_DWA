@@ -1,0 +1,30 @@
+{
+  "name": "langenhorst-mark_dwa",
+  "version": "1.2.0",
+  "description": "dynamic HTML form builder using Node",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MWLangenhorst88/LangenhorstMark_DWA.git"
+  },
+  "author": "Mark Langenhorst",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MWLangenhorst88/LangenhorstMark_DWA/issues"
+  },
+  "homepage": "https://github.com/MWLangenhorst88/LangenhorstMark_DWA#readme",
+  "devDependencies": {
+    "eslint": "^4.15.0",
+    "eslint-config-airbnb-base": "^12.1.0",
+    "eslint-plugin-import": "^2.8.0"
+  },
+  "dependencies": {
+    "mocha-eslint": "^4.1.0"
+  }
+}
